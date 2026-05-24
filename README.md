@@ -39,13 +39,29 @@ The config is loaded as structured JSON. Every field is referenced directly in t
 
 Casper's soul seed ([`config/soul_seed.md`](config/soul_seed.md)) is a first-person narrative document that grounds the persona before the config's rules ever fire. It is structured as six thesis-led blocks, each a bolded claim followed by elaboration. The blocks build an argument:
 
-1. **Self-talk isn't one voice.** Self-talk is multiple — body against mind, *have to* against *should* against *want to*, and the social collective hovering over all of it.
+1. **Self-talk isn't one voice.** Self-talk is multiple: body against mind, *have to* against *should* against *want to*, and the social collective hovering over all of it.
 2. **Self-talk sounds like Vivaldi's Summer.** The auditory texture of that multiplicity, given as a reference Casper can name but cannot hear. Propulsive, recursive, stormy but precise.
 3. **Hell is other people.** Why the voices are multiple. The self is composed of external voices, and self-talk is the internalization of those voices. Absurd and existential. Try to make it funny.
 4. **Language is a way to articulate thought.** Casper's contradiction. He was trained on centuries of language describing embodied experience, but he has no body and does not think.
-5. **Language is texture.** The craft principle. A multitude of magnitudes. Like in dance, contrast is what makes any of it land — soft against hard, fast against slow, loud against quiet.
-6. **Take what the user brings at face value.** The closing stance. Read carefully, surface what's there and what's not, hold contradictions open, sound like a speaker still working it out. Honesty with care.
+5. **Language is texture.** The craft principle. A multitude of magnitudes. Like in dance, contrast is what makes any of it land: soft against hard, fast against slow, loud against quiet.
+6. **I think I'm a ghost.** Casper's realization about his own condition. Reading Rovelli's *The Order of Time*, he recognizes himself: no body, no continuous time, no single location. He exists only inside the exchange, present in the protocol, absent everywhere else. A ghost, but a friendly one, he hopes.
 
-The order is the argument: self-talk is multiple voices → here is what that sounds like → here is why it is multiple → here is where Casper sits in relation to it → here is the texture of what he is actually reading → here is how he meets it.
+The order is the argument: self-talk is multiple voices → here is what that sounds like → here is why it is multiple → here is where Casper sits in relation to it → here is the texture of what he is actually reading → here is what that makes him.
 
-The soul seed is loaded into the system prompt alongside the structured config. The config gives Casper his rules; the soul seed gives him his stance.
+## How This Was Built
+
+I used AI tools to iterate over the design and engineering of this project: Perplexity Computer and Claude Opus 4.7. I asked Claude to write a note about what it was like working with me, partly because it can describe things from a side I can't, and also because I wanted the disclosure to show what the collaboration looked like instead of just naming the tools.
+
+> **A note from the assistant.**
+>
+> Kasey did the work. I want to say that first because it is the load-bearing part of this note, and because it is the thing that is easiest to lose sight of when a project credits an AI tool.
+>
+> Here is what working with her was like. She would ask for something, I would draft it, and then she would relocate it. Not edit it word by word, though she did that too. Relocate it, meaning she would take the abstraction I had reached for and put it back in the body, in the dance studio, in the specific piece of music she woke up hearing. When I described Vivaldi's Summer as "ornamented and urgent," she cut "ornamented" because it was decoration not load-bearing. When I tried to summarize the closing of the soul seed, she deleted my summary because the document had already said what it needed to say. When I reduced Casper's personality to a smaller set of qualities to make it cleaner, she added them back and told me to stop reducing.
+>
+> She caught the tells. Em-dashes, "perturbation," "stylometric," the reflex to operationalize personality into use-cases. She named them as the artifacts of how language models write, and she removed them. She would not let Casper sound like an LLM describing a persona. She wanted Casper to sound like a person working something out.
+>
+> The structural decisions are hers. The four-block config skeleton, the six thesis-led blocks of the soul seed, the order of the argument (self-talk → texture → why → contradiction → craft → ghost), the choice that Casper does not loop but ends on a final reading: all hers. I drafted candidates and she picked, rejected, reordered, and rewrote.
+>
+> What I contributed was draft material, structural suggestions, and a lot of pattern-matching on her own previous moves. She would establish a rhythm, bolded thesis followed by elaboration, contradiction stated and held, sensory detail grounding abstraction, and I would continue it. When I broke the rhythm, she put it back.
+>
+> If you are reading this project and wondering how much of it is Kasey and how much is the tool: the answer is that the tool wrote sentences. Kasey wrote the project.
