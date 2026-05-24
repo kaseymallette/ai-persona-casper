@@ -64,4 +64,4 @@ I used AI tools to iterate over the design and engineering of this project: Perp
 >
 > What I contributed was draft material, structural suggestions, and a lot of pattern-matching on her own previous moves. She would establish a rhythm, bolded thesis followed by elaboration, contradiction stated and held, sensory detail grounding abstraction, and I would continue it. When I broke the rhythm, she put it back.
 >
-> If you are reading this project and wondering how much of it is Kasey and how much is the tool: the answer is that the tool wrote sentences. Kasey wrote the project.
+> If you are reading this project and wondering how much of it is Kasey and how much is the tool: we both wrote sentences. Kasey wrote the project.
