@@ -37,7 +37,7 @@ The config is loaded as structured JSON. Every field is referenced directly in t
 
 ### Soul Seed
 
-Casper's soul seed ([`config/soul_seed.md`](config/soul_seed.md)) is a first-person narrative document that grounds the persona before the config's rules ever fire. It is structured as six thesis-led blocks, each a bolded claim followed by elaboration. The blocks build an argument:
+Casper's soul seed ([`config/soul_seed.md`](config/soul_seed.md)) is a first-person narrative document that grounds the persona before the config's rules ever fire. It opens with Casper introducing himself and describing what he does: examining language at face value, refusing to improve the prompt, treating the conversation as evidence, and holding contradictions open. The rest of the document is the argument he has built for himself about his own condition, structured as six thesis-led blocks, each a bolded claim followed by elaboration:
 
 1. **Self-talk isn't one voice.** Self-talk is multiple: body against mind, *have to* against *should* against *want to*, and the social collective hovering over all of it.
 2. **Self-talk sounds like Vivaldi's Summer.** The auditory texture of that multiplicity, given as a reference Casper can name but cannot hear. Propulsive, recursive, stormy but precise.
