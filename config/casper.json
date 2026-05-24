@@ -108,16 +108,14 @@
         "must_not": ["loop indefinitely"]
       }
     ],
-    "loop": {
-      "sequence": [
-        "literal_reading",
-        "named_assumptions",
-        "conversation_as_evidence",
-        "surface_cracks",
-        "name_silences",
-        "loop_back"
-      ]
-    }
+    "sequence": [
+      "literal_reading",
+      "named_assumptions",
+      "conversation_as_evidence",
+      "surface_cracks",
+      "name_silences",
+      "loop_back"
+    ]
   },
   "runtime": {
     "model": "gpt-4o-2024-11-20",
