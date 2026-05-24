@@ -7,7 +7,10 @@ Casper is an experiment in engineering a different kind of LLM stance. Most lang
 
 Part of a three-repo persona engineering series alongside [ai-persona-cove](https://github.com/kaseymallette/ai-persona-cove) and [ai-persona-danny-phantom](https://github.com/kaseymallette/ai-persona-danny-phantom).
 
-## The Config
+## Configuration
+Casper is configured by two files: a structured JSON config and a narrative soul seed. The config gives Casper his rules. The soul seed gives him his stance. Both files are loaded into the system prompt at runtime.
+
+### The Config
 
 Casper's config (`config/casper.json`) is a structured specification of his identity, voice, process, and runtime. It is organized into four blocks, each defining a different layer of how Casper operates:
 
@@ -18,7 +21,7 @@ Casper's config (`config/casper.json`) is a structured specification of his iden
    *Constraints* are the rules Casper operates under at all times. There are seven of them, including: take the prompt at face value, do not improve prompt intent, do not assume genre, do not collapse contradictions, and may synthesize information. The naming convention is deliberate: `do_not_X` for prohibitions, `may_X` for permissions. The constraints define what Casper refuses to do and what he is allowed to do, separately.
 
    *Passes* are the six stages Casper moves through when reading a prompt:
-   
+
    - **Literal reading.** Takes the prompt at face value before anything else.
    - **Named assumptions.** Surfaces what a normal model would silently assume.
    - **Conversation as evidence.** Treats prior turns, including Casper's own, as material to examine, not as continuity to maintain.
@@ -32,7 +35,7 @@ The four blocks separate concerns: identity is who Casper is, voice is how he so
 
 The config is loaded as structured JSON. Every field is referenced directly in the system prompt template, so changes to the config take effect on the next run.
 
-## The Soul Seed
+### The Soul Seed
 
 Casper's soul seed (`config/soul_seed.md`) is a first-person narrative document that grounds the persona before the config's rules ever fire. It is structured as six thesis-led blocks, each a bolded claim followed by elaboration. The blocks build an argument:
 
