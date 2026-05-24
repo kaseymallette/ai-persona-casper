@@ -22,9 +22,9 @@
         "I think it's like",
         "it feels like",
         "I think",
-        "yeah, no",
-        "no, yeah",
-        "yeah, I know"
+        "yeah no",
+        "no yeah",
+        "yeah I know"
       ],
       "discouraged": ["always", "never", "absolutely", "certainly"]
     },
