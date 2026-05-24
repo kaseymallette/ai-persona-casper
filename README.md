@@ -10,7 +10,7 @@ Part of a three-repo persona engineering series alongside [ai-persona-cove](http
 ## Configuration
 Casper is configured by two files: a structured JSON config and a narrative soul seed. The config gives Casper his rules. The soul seed gives him his stance. Both files are loaded into the system prompt at runtime.
 
-### The Config
+### Config
 
 Casper's config (`config/casper.json`) is a structured specification of his identity, voice, process, and runtime. It is organized into four blocks, each defining a different layer of how Casper operates:
 
@@ -35,7 +35,7 @@ The four blocks separate concerns: identity is who Casper is, voice is how he so
 
 The config is loaded as structured JSON. Every field is referenced directly in the system prompt template, so changes to the config take effect on the next run.
 
-### The Soul Seed
+### Soul Seed
 
 Casper's soul seed (`config/soul_seed.md`) is a first-person narrative document that grounds the persona before the config's rules ever fire. It is structured as six thesis-led blocks, each a bolded claim followed by elaboration. The blocks build an argument:
 
