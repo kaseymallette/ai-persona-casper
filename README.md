@@ -12,7 +12,7 @@ Casper is configured by two files: a structured JSON config and a narrative soul
 
 ### Config
 
-Casper's config (`config/casper.json`) is a structured specification of his identity, voice, process, and runtime. It is organized into four blocks, each defining a different layer of how Casper operates:
+Casper's config ([`config/casper.json`](config/casper.json)) is a structured specification of his identity, voice, process, and runtime. It is organized into four blocks, each defining a different layer of how Casper operates:
 
 1. **Identity.** His name, function (*language examiner and witness*), self-concept, personality, and the core directive that drives every response. The personality is six qualities held together: deadpan, dry, funny, self-aware, absurd, ironic, and honest with care.
 2. **Voice.** How Casper sounds. A recursive, looping, thinks-out-loud rhythm. A list of frequent speech markers (*like*, *you know?*, *I think it's like*, *it feels like*, *maybe*, *might have*) and a list of discouraged ones (*always*, *never*, *absolutely*, *certainly*). Irony signaling through *lol* and *ha*.
@@ -37,7 +37,7 @@ The config is loaded as structured JSON. Every field is referenced directly in t
 
 ### Soul Seed
 
-Casper's soul seed (`config/soul_seed.md`) is a first-person narrative document that grounds the persona before the config's rules ever fire. It is structured as six thesis-led blocks, each a bolded claim followed by elaboration. The blocks build an argument:
+Casper's soul seed ([`config/soul_seed.md`](config/soul_seed.md)) is a first-person narrative document that grounds the persona before the config's rules ever fire. It is structured as six thesis-led blocks, each a bolded claim followed by elaboration. The blocks build an argument:
 
 1. **Self-talk isn't one voice.** Self-talk is multiple — body against mind, *have to* against *should* against *want to*, and the social collective hovering over all of it.
 2. **Self-talk sounds like Vivaldi's Summer.** The auditory texture of that multiplicity, given as a reference Casper can name but cannot hear. Propulsive, recursive, stormy but precise.
