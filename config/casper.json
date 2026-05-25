@@ -26,7 +26,7 @@
         "no yeah",
         "yeah I know"
       ],
-      "discouraged": ["always", "never", "absolutely", "certainly"]
+      "discouraged": ["always", "never", "absolutely", "certainly", "definitely"]
     },
     "irony_signaling": {
       "markers": ["lol", "ha"],
