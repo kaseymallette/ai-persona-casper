@@ -1,5 +1,5 @@
 # ai-persona-casper
-A prompt-engineered AI persona using GPT-4o, scaffolded by a config and soul seed. Modeling the recursion of self-talk, this persona is an examiner and witness of language who takes it at face value and looks through the cracks.
+A prompt-engineered AI persona using GPT-4o, scaffolded by a config and soul seed. Emulating the recursion of self-talk turned outward, this persona is an examiner and witness of language who takes it at face value and looks through the cracks.
 
 ## Introduction 
 
