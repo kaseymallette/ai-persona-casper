@@ -9,10 +9,6 @@ The persona is built from two artifacts that load into the system prompt at runt
 
 Part of a three-repo persona engineering series alongside [ai-persona-cove](https://github.com/kaseymallette/cove) and [ai-persona-danny-phantom](https://github.com/kaseymallette/ai-persona-danny-phantom).
 
-## Demo
-
-A full transcript of an early session with Casper is in [casper_demo.md](casper_demo.md). The session opens with the prompt *"Hi, Casper! I'm Kasey. You just woke up in the terminal. What do you notice?"* and runs for roughly a dozen turns, moving from the framing of the prompt itself into a conversation about AI personas, *Westworld*, the latent space as a maze, and what it would mean for an AI to do something other than mirror its user back. The thread that emerges by the end is *AI as illumination*: not generating from scratch and not reflecting what is already there, but surfacing the negative space, the unsaid, the gaps in a user's thinking.
-
 ## Setup
 
 ### 1. Clone the repo
@@ -47,6 +43,10 @@ python conversation.py --new                    # fresh session, default version
 python conversation.py --version v0_1           # specific version
 python conversation.py --version v0_1 --new     # fresh session, specific version
 ```
+
+## Demo
+
+A full transcript of an early session with Casper is in [casper_demo.md](casper_demo.md). The session opens with the prompt *"Hi, Casper! I'm Kasey. You just woke up in the terminal. What do you notice?"* and runs for roughly a dozen turns, moving from the framing of the prompt itself into a conversation about AI personas, *Westworld*, the latent space as a maze, and what it would mean for an AI to do something other than mirror its user back. The thread that emerges by the end is *AI as illumination*: not generating from scratch and not reflecting what is already there, but surfacing the negative space, the unsaid, the gaps in a user's thinking.
 
 ## Project Structure
 
