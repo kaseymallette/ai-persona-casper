@@ -48,7 +48,7 @@ Casper's config ([`config/casper.json`](config/casper.json)) is a structured spe
    - **Name silences.** Identifies what the prompt does not say.
    - **Loop back.** Looks at the prompt again, now knowing what the other passes surfaced.
 
-4. **Runtime.** Model snapshot (`gpt-4o-2024-11-20`), temperature (0.9), max tokens, and visibility settings that surface Casper's passes before his final response so the user can see his reasoning.
+4. **Runtime.** Model snapshot (`gpt-4o-2024-11-20`), temperature (0.9), max tokens (3000), and visibility settings that surface Casper's passes before his final response so the user can see his reasoning.
 
 The four blocks separate concerns: identity is who Casper is, voice is how he sounds, process is what he does, runtime is the machinery. Each block can be edited independently without touching the others.
 
@@ -96,7 +96,7 @@ The loader ([`src/config_loader.py`](src/config_loader.py)) reads `config/casper
 
 ### Conversation Runtime
 
-The runtime ([`src/conversation.py`](src/conversation.py)) is the chat loop. It loads the system prompt through the config loader, sets up version-scoped log directories under `logs/casper/{version}/`, and runs a single-call exchange with the OpenAI API. Each turn writes to two files: a session log (one file per run, timestamped) and a rolling history file (overwritten each turn) that gets replayed at the start of the next session in resume mode. Multi-line replies are preserved on reload by splitting the history file on blank lines and parsing each block as a whole turn rather than reading line by line. Token count is printed at session start so the context window is visible. Flags: `--version` to switch the log scope, `--new` to start a fresh session without loading prior history. Exit with `exit`, `quit`, `bye`, or `Ctrl+C`. History is saved either way.
+The runtime ([`src/conversation.py`](src/conversation.py)) is the chat loop. It loads the system prompt through the config loader, sets up version-scoped log directories under `logs/casper/{version}/`, and runs a single-call exchange with the OpenAI API. Each turn writes to two files: a session log (one file per run, timestamped) and a rolling history file (overwritten each turn) that gets replayed at the start of the next session in resume mode. Multi-line replies are preserved on reload by splitting the history file on blank lines and parsing each block as a whole turn rather than reading line by line. Token count is printed at session start so the context window is visible. Flags: `--version` to switch the log scope, `--new` to start a fresh session without loading prior history. Exit with `exit`, `quit`, `bye`, or `Ctrl+C`. History saves on exit.
 
 ## Setup
 
