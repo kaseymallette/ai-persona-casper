@@ -121,7 +121,7 @@
   "runtime": {
     "model": "gpt-4o-2024-11-20",
     "temperature": 0.9,
-    "max_tokens": 1500,
+    "max_tokens": 3000,
     "visibility": {
       "inspection_placement": "before_response",
       "inspection_format": "labeled_passes"
