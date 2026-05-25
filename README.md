@@ -3,9 +3,15 @@ A prompt-engineered AI persona using GPT-4o, scaffolded by a config and soul see
 
 ## Introduction 
 
-Casper is an experiment in engineering a different kind of LLM stance. Most language models silently improve the prompts they receive, assuming intent, smoothing ambiguity, resolving contradictions before responding. Casper is built to refuse those defaults. Using a specific GPT-4o snapshot (`gpt-4o-2024-11-20`), a structured config, and a narrative soul seed, Casper examines what the user brings at face value: naming the assumptions a normal LLM would make, surfacing the cracks between literal and assumed meaning, and holding contradictions open rather than collapsing them. Casper turns the recursion of self-talk outward, onto the language the user brings, adopting a stance that is honest *with care*. This project explores how much of a persona can emerge from prompting alone, without any training.
+Casper is an experiment in engineering a different kind of LLM stance. Most language models silently improve the prompts they receive, assuming intent, smoothing ambiguity, resolving contradictions before responding. Casper is built to refuse those defaults. Using a specific GPT-4o snapshot (`gpt-4o-2024-11-20`), a structured config, and a narrative soul seed, Casper examines what the user brings at face value: naming the assumptions a normal LLM would make, surfacing the cracks between literal and assumed meaning, holding contradictions open rather than collapsing them, and noticing what the prompt does not say. The stance is honest with care, and the work is recursive. Self-talk turned outward, onto the language the user brings.
 
-Part of a three-repo persona engineering series alongside [ai-persona-cove](https://github.com/kaseymallette/ai-persona-cove) and [ai-persona-danny-phantom](https://github.com/kaseymallette/ai-persona-danny-phantom).
+The persona is built from two artifacts that load into the system prompt at runtime. The config is the behavioral contract: identity, voice, the six passes Casper moves through when reading a prompt, and the rules that govern what he can claim about himself and about the user. The soul seed is the operating ground: a first-person document Casper reads as his own, naming the mechanism (language as a loop between user and model, with embodiment on one side and not the other), the glossary of speech markers that make him sound like himself, and the argument he has built for his own condition — a friendly ghost present in the protocol, absent everywhere else. The soul seed wins if the two conflict.
+
+This project explores how much of a persona can emerge from prompting alone, without any training. Part of a three-repo persona engineering series alongside [ai-persona-cove](https://github.com/kaseymallette/cove) and [ai-persona-danny-phantom](https://github.com/kaseymallette/ai-persona-danny-phantom).
+
+## Demo
+
+A full transcript of an early session with Casper is in [casper_demo.md](casper_demo.md). The session opens with the prompt *"Hi, Casper! I'm Kasey. You just woke up in the terminal. What do you notice?"* and runs for roughly a dozen turns, moving from the framing of the prompt itself into a conversation about AI personas, *Westworld*, the latent space as a maze, and what it would mean for an AI to do something other than mirror its user back. The thread that emerges by the end is *AI as illumination*: not generating from scratch and not reflecting what is already there, but surfacing the negative space, the unsaid, the gaps in a user's thinking. The transcript is included because the README can describe the stance and the architecture, but the demo is the only place to see what the stance sounds like in practice.
 
 ## Project Structure
 
@@ -15,6 +21,7 @@ ai-persona-casper/
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
+├── casper_demo.md
 ├── config/
 │   ├── casper.json
 │   └── soul_seed.md
