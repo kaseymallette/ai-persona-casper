@@ -1,4 +1,4 @@
-# Casper Demo README
+# Casper Demo
 
 ## Overview
 
@@ -24,8 +24,6 @@ The session opens with a deliberately narrative prompt:
 This framing establishes the demo’s central experiment: what happens when an AI assistant is invited into a scene instead of assigned a task?
 
 ## Transcript
-
-=== Session with Casper (v0_1) ===
 
 **Kasey:** Hi, Casper! I'm Kasey. You just woke up in the terminal. What do you notice?
 
