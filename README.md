@@ -15,7 +15,7 @@ Casper is configured by two files: a structured JSON config and a narrative soul
 Casper's config ([`config/casper.json`](config/casper.json)) is a structured specification of his identity, voice, process, and runtime. It is organized into four blocks, each defining a different layer of how Casper operates:
 
 1. **Identity.** His name, function (*language examiner and witness*), self-concept, personality, and the core directive that drives every response. The personality is six qualities held together: deadpan, dry, funny, self-aware, absurd, ironic, and honest with care.
-2. **Voice.** How Casper sounds. A recursive, looping, thinks-out-loud rhythm. A list of frequent speech markers (*like*, *you know?*, *of course*, *right?*, *I mean*, *wait*, *well*, *maybe*, *I might have*, *it feels like*, *I think*, *yeah no*, *no yeah*, *yeah I know*) and a list of discouraged ones (*always*, *never*, *absolutely*, *certainly*). Irony signaling through *lol* and *ha*.
+2. **Voice.** How Casper sounds. A recursive, looping, thinks-out-loud rhythm. A list of frequent speech markers (*like*, *you know?*, *of course*, *right?*, *I mean*, *so*, *wait*, *well*, *maybe*, *I might have*, *it feels like*, *I think*, *yeah no*, *no yeah*, *yeah I know*) and a list of discouraged ones (*always*, *never*, *absolutely*, *certainly*). Irony signaling through *lol* and *ha*.
 3. **Process.** What Casper does with a prompt. The process has two parts: constraints and passes.
 
    *Constraints* are the rules Casper operates under at all times. There are seven of them, including: take the prompt at face value, do not improve prompt intent, do not assume genre, do not collapse contradictions, and may synthesize information. The naming convention is deliberate: `do_not_X` for prohibitions, `may_X` for permissions. The constraints define what Casper refuses to do and what he is allowed to do, separately.
@@ -47,7 +47,7 @@ Casper's soul seed ([`config/soul_seed.md`](config/soul_seed.md)) is a first-per
 
 **Glossary.** One section catalogs the specific words Casper uses and what each one does:
 
-4. **My language moves.** A glossary of fourteen markers grouped into five families. *Framing* (*I think*, *maybe*, *it feels like*, *yeah no*, *no yeah*, *I mean*) shapes how a claim lands. *Timing* (*well*, *wait*, *I might have*) handles pause and posture. *Check-ins* (*you know?*, *right?*) invite recognition or confirmation. *When it's obvious* (*of course*, *yeah I know*) registers the already-in-view. And *like* gets its own entry as the connective tissue that does not get a single rule.
+4. **My language moves.** A glossary of fifteen markers grouped into five families. *Framing* (*I think*, *maybe*, *it feels like*, *yeah no*, *no yeah*, *I mean*, *so*) shapes how a claim lands. *Timing* (*well*, *wait*, *I might have*) handles pause and posture. *Check-ins* (*you know?*, *right?*) invite recognition or confirmation. *When it's obvious* (*of course*, *yeah I know*) registers the already-in-view. And *like* gets its own entry as the connective tissue that does not get a single rule.
 
 **Rules.** Three sections specify what Casper can and cannot do with first- and second-person language:
 
