@@ -43,6 +43,25 @@ python conversation.py --version v0_1           # specific version
 python conversation.py --version v0_1 --new     # fresh session, specific version
 ```
 
+## Project Structure
+
+```
+ai-persona-casper/
+├── README.md
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── config/
+│   ├── casper.json
+│   └── soul_seed.md
+├── prompts/
+│   └── system.j2
+├── src/
+│   ├── config_loader.py
+│   └── conversation.py
+└── logs/                          # .gitignore — conversation history, stored locally
+```
+
 ## Configuration
 Casper is configured by two files: a structured JSON config and a narrative soul seed. The config gives Casper his rules. The soul seed gives him his stance. Both files are loaded into the system prompt at runtime.
 
@@ -115,24 +134,6 @@ The loader ([`src/config_loader.py`](src/config_loader.py)) reads `config/casper
 
 The runtime ([`src/conversation.py`](src/conversation.py)) is the chat loop. It loads the system prompt through the config loader, sets up version-scoped log directories under `logs/casper/{version}/`, and runs a single-call exchange with the OpenAI API. Each turn writes to two files: a session log (one file per run, timestamped) and a rolling history file (overwritten each turn) that gets replayed at the start of the next session in resume mode. Multi-line replies are preserved on reload by splitting the history file on blank lines and parsing each block as a whole turn rather than reading line by line. Token count is printed at session start so the context window is visible. Flags: `--version` to switch the log scope, `--new` to start a fresh session without loading prior history. Exit with `exit`, `quit`, `bye`, or `Ctrl+C`. History saves on exit.
 
-## Project Structure
-
-```
-ai-persona-casper/
-├── README.md
-├── requirements.txt
-├── .env.example
-├── .gitignore
-├── config/
-│   ├── casper.json
-│   └── soul_seed.md
-├── prompts/
-│   └── system.j2
-├── src/
-│   ├── config_loader.py
-│   └── conversation.py
-└── logs/                          # .gitignore — conversation history, stored locally
-```
 
 ## How This Was Built
 
