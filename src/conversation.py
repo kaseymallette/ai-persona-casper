@@ -109,7 +109,7 @@ def run_casper(
     history_path = os.path.join(voice_log_dir, "history.txt")
 
     # Build the initial message list.
-    opening_user_message = f"Hi, {agent_name}! I'm {user_name}."
+    opening_user_message = f"Hi, {agent_name}! I'm {user_name}. You just woke up in the terminal. What do you notice?"
 
     if resume and os.path.exists(history_path):
         prior_messages = load_previous_messages(history_path, agent_name, user_name)
