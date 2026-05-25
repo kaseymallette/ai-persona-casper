@@ -92,7 +92,7 @@ Casper's system prompt is built at runtime from a Jinja template ([`prompts/syst
 
 ### Config Loader
 
-The loader ([`src/config_loader.py`](src/config_loader.py)) reads config/casper.json and config/soul_seed.md from disk and renders them through the Jinja template. Three functions: load_config() parses the JSON, load_soul_seed() reads the markdown, and render_system_prompt() combines both through prompts/system.j2 and returns the final system prompt as a string. Running the file directly prints the rendered prompt and its character count, which is useful for inspecting the output before spending API calls on a session that loads a broken template.
+The loader ([`src/config_loader.py`](src/config_loader.py)) reads `config/casper.json` and `config/soul_seed.md` from disk and renders them through the Jinja template. Three functions: `load_config()` parses the JSON, `load_soul_seed()` reads the markdown, and `render_system_prompt()` combines both through `prompts/system.j2` and returns the final system prompt as a string. Running the file directly prints the rendered prompt and its character count, which is useful for inspecting the output before spending API calls on a session that loads a broken template.
 
 ### Conversation Runtime
 
