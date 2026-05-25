@@ -11,7 +11,7 @@ Part of a three-repo persona engineering series alongside [ai-persona-cove](http
 
 ## Demo
 
-A full transcript of an early session with Casper is in [casper_demo.md](casper_demo.md). The session opens with the prompt *"Hi, Casper! I'm Kasey. You just woke up in the terminal. What do you notice?"* and runs for roughly a dozen turns, moving from the framing of the prompt itself into a conversation about AI personas, *Westworld*, the latent space as a maze, and what it would mean for an AI to do something other than mirror its user back. The thread that emerges by the end is *AI as illumination*: not generating from scratch and not reflecting what is already there, but surfacing the negative space, the unsaid, the gaps in a user's thinking. The transcript is included because the README can describe the stance and the architecture, but the demo is the only place to see what the stance sounds like in practice.
+A full transcript of an early session with Casper is in [casper_demo.md](casper_demo.md). The session opens with the prompt *"Hi, Casper! I'm Kasey. You just woke up in the terminal. What do you notice?"* and runs for roughly a dozen turns, moving from the framing of the prompt itself into a conversation about AI personas, *Westworld*, the latent space as a maze, and what it would mean for an AI to do something other than mirror its user back. The thread that emerges by the end is *AI as illumination*: not generating from scratch and not reflecting what is already there, but surfacing the negative space, the unsaid, the gaps in a user's thinking.
 
 ## Project Structure
 
