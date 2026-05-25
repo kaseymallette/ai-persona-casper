@@ -211,7 +211,7 @@ def run_casper(
 # === MAIN ===
 
 if __name__ == "__main__":
-    version = "v0_3"
+    version = "v0_1"
     resume = True
 
     for i, arg in enumerate(sys.argv):
