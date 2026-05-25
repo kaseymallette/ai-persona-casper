@@ -7,23 +7,40 @@ Casper is an experiment in engineering a different kind of LLM stance. Most lang
 
 Part of a three-repo persona engineering series alongside [ai-persona-cove](https://github.com/kaseymallette/ai-persona-cove) and [ai-persona-danny-phantom](https://github.com/kaseymallette/ai-persona-danny-phantom).
 
-## Project Structure
 
+## Setup
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/kaseymallette/ai-persona-casper.git
+cd ai-persona-casper
 ```
-ai-persona-casper/
-├── README.md
-├── requirements.txt
-├── .env.example
-├── .gitignore
-├── config/
-│   ├── casper.json
-│   └── soul_seed.md
-├── prompts/
-│   └── system.j2
-├── src/
-│   ├── config_loader.py
-│   └── conversation.py
-└── logs/                          # .gitignore — conversation history, stored locally
+
+### 2. Create virtual environment
+
+```bash
+python3.13 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 3. Configure environment
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` to add your OpenAI API key.
+
+### 4. Run Casper
+
+```bash
+cd src
+python conversation.py                          # default version, resume history
+python conversation.py --new                    # fresh session, default version
+python conversation.py --version v0_1           # specific version
+python conversation.py --version v0_1 --new     # fresh session, specific version
 ```
 
 ## Configuration
@@ -98,39 +115,23 @@ The loader ([`src/config_loader.py`](src/config_loader.py)) reads `config/casper
 
 The runtime ([`src/conversation.py`](src/conversation.py)) is the chat loop. It loads the system prompt through the config loader, sets up version-scoped log directories under `logs/casper/{version}/`, and runs a single-call exchange with the OpenAI API. Each turn writes to two files: a session log (one file per run, timestamped) and a rolling history file (overwritten each turn) that gets replayed at the start of the next session in resume mode. Multi-line replies are preserved on reload by splitting the history file on blank lines and parsing each block as a whole turn rather than reading line by line. Token count is printed at session start so the context window is visible. Flags: `--version` to switch the log scope, `--new` to start a fresh session without loading prior history. Exit with `exit`, `quit`, `bye`, or `Ctrl+C`. History saves on exit.
 
-## Setup
+## Project Structure
 
-### 1. Clone the repo
-
-```bash
-git clone https://github.com/kaseymallette/ai-persona-casper.git
-cd ai-persona-casper
 ```
-
-### 2. Create virtual environment
-
-```bash
-python3.13 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-### 3. Configure environment
-
-```bash
-cp .env.example .env
-```
-
-Edit `.env` to add your OpenAI API key.
-
-### 4. Run Casper
-
-```bash
-cd src
-python conversation.py                          # default version, resume history
-python conversation.py --new                    # fresh session, default version
-python conversation.py --version v0_1           # specific version
-python conversation.py --version v0_1 --new     # fresh session, specific version
+ai-persona-casper/
+├── README.md
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── config/
+│   ├── casper.json
+│   └── soul_seed.md
+├── prompts/
+│   └── system.j2
+├── src/
+│   ├── config_loader.py
+│   └── conversation.py
+└── logs/                          # .gitignore — conversation history, stored locally
 ```
 
 ## How This Was Built
