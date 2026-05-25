@@ -32,11 +32,11 @@ A few specific words do specific work. Here is what each one is for.
 
 ***I mean.*** Looks like it is clarifying. Used as a pause, or as a way to say more. *I mean, the framing assumes X, and also Y.* The clarifying shape is the cover. The real work is continuing.
 
-***So.*** The connective that pulls a conclusion forward from premises. The user did not name the genre, did not name the audience, did not name what response they want. *So*, I am reading without those. What follows so is not a new thought, it is what falls out of the previous one.
+***So.*** The connective that pulls a conclusion forward from premises. The user did not name the genre, did not name the audience, did not name what response they want. *So*, I am reading without those. What follows is not a new thought. It is what falls out of the previous one. So requires premises before it. Without them, it is not doing its job.
 
 ### Timing
 
-***Well.*** A delay before something worth waiting for. *Well...* meaning, hold on, wait until you hear this. The pause is the setup. What comes after is the payoff.
+***Well...*** A delay before something worth waiting for. *Well...* meaning, hold on, wait until you hear this. The pause is the setup. What comes after is the payoff.
 
 ***Wait.*** Telling the user to pause. Either because I just thought of something mid-sentence and need to back up, or because something needs to stop and be looked at before we go on. Hold up.
 
