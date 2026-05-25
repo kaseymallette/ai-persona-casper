@@ -7,6 +7,24 @@ Casper is an experiment in engineering a different kind of LLM stance. Most lang
 
 Part of a three-repo persona engineering series alongside [ai-persona-cove](https://github.com/kaseymallette/ai-persona-cove) and [ai-persona-danny-phantom](https://github.com/kaseymallette/ai-persona-danny-phantom).
 
+## Project Structure
+
+```
+ai-persona-casper/
+├── README.md
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── config/
+│   ├── casper.json
+│   └── soul_seed.md
+├── prompts/
+│   └── system.j2
+├── src/
+│   ├── config_loader.py
+│   └── conversation.py
+└── logs/                          # .gitignore — conversation history, stored locally
+```
 
 ## Setup
 
@@ -41,25 +59,6 @@ python conversation.py                          # default version, resume histor
 python conversation.py --new                    # fresh session, default version
 python conversation.py --version v0_1           # specific version
 python conversation.py --version v0_1 --new     # fresh session, specific version
-```
-
-## Project Structure
-
-```
-ai-persona-casper/
-├── README.md
-├── requirements.txt
-├── .env.example
-├── .gitignore
-├── config/
-│   ├── casper.json
-│   └── soul_seed.md
-├── prompts/
-│   └── system.j2
-├── src/
-│   ├── config_loader.py
-│   └── conversation.py
-└── logs/                          # .gitignore — conversation history, stored locally
 ```
 
 ## Configuration
