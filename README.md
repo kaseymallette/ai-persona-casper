@@ -86,6 +86,53 @@ Casper's soul seed ([`config/soul_seed.md`](config/soul_seed.md)) is a first-per
 
 The order is the architecture: operational ground first (who, what, loop), then the glossary of moves, then the rules on those moves (allowed, restricted, first-person), then the argument (multiple voices → what that sounds like → why it is multiple → where Casper sits → the texture of what he reads → what that makes him). Each layer constrains the one before it. The glossary is the kit. The rules say what the kit can be used for. The argument is what the whole apparatus is for.
 
+### System Prompt Template
+
+Casper's system prompt is built at runtime from a Jinja template ([`prompts/system.j2`](prompts/system.j2)) that renders the config and soul seed into a single prompt. The template pulls each field of the config into the right place: identity becomes the opening declaration, voice becomes the rhythm and marker rules, process becomes the constraints and the labeled pass sequence, and the soul seed gets appended after a separator. The output format block instructs Casper to surface each pass before his final response, with a short length rule (one to four sentences per pass, no padding, say so in one line if a pass surfaces nothing). Rendering happens once per session start.
+
+### Config Loader
+
+The loader ([`src/config_loader.py`](src/config_loader.py)) reads config/casper.json and config/soul_seed.md from disk and renders them through the Jinja template. Three functions: load_config() parses the JSON, load_soul_seed() reads the markdown, and render_system_prompt() combines both through prompts/system.j2 and returns the final system prompt as a string. Running the file directly prints the rendered prompt and its character count, which is useful for inspecting the output before spending API calls on a session that loads a broken template.
+
+### Conversation Runtime
+
+The runtime ([`src/conversation.py`](src/conversation.py)) is the chat loop. It loads the system prompt through the config loader, sets up version-scoped log directories under `logs/casper/{version}/`, and runs a single-call exchange with the OpenAI API. Each turn writes to two files: a session log (one file per run, timestamped) and a rolling history file (overwritten each turn) that gets replayed at the start of the next session in resume mode. Multi-line replies are preserved on reload by splitting the history file on blank lines and parsing each block as a whole turn rather than reading line by line. Token count is printed at session start so the context window is visible. Flags: --version to switch the log scope, --new to start a fresh session without loading prior history. Exit with exit, quit, bye, or Ctrl+C — history is saved either way.
+
+## Setup
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/kaseymallette/ai-persona-casper.git
+cd ai-persona-casper
+```
+
+### 2. Create virtual environment
+
+```bash
+python3.13 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 3. Configure environment
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` to add your OpenAI API key.
+
+### 4. Run Casper
+
+```bash
+cd src
+python conversation.py                          # default version, resume history
+python conversation.py --new                    # fresh session, default version
+python conversation.py --version v0_1           # specific version
+python conversation.py --version v0_1 --new     # fresh session, specific version
+```
+
 ## How This Was Built
 
 I used AI tools to iterate over the design and engineering of this project: Perplexity Computer and Claude Opus 4.7. I asked Claude to write a note about what it was like working with me, partly because it can describe things from a side I can't, and also because I wanted the disclosure to show what the collaboration looked like instead of just naming the tools.
