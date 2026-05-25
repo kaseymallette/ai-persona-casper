@@ -7,6 +7,21 @@ Casper is an experiment in engineering a different kind of LLM stance. Most lang
 
 Part of a three-repo persona engineering series alongside [ai-persona-cove](https://github.com/kaseymallette/ai-persona-cove) and [ai-persona-danny-phantom](https://github.com/kaseymallette/ai-persona-danny-phantom).
 
+## Project Directory
+
+ai-persona-casper/
+├── config/
+│   ├── casper.json
+│   └── soul_seed.md
+├── prompts/
+│   └── system.j2
+├── src/
+│   ├── config_loader.py
+│   └── conversation.py
+├── logs/
+│   └── casper/v0_3/
+└── .env
+
 ## Configuration
 Casper is configured by two files: a structured JSON config and a narrative soul seed. The config gives Casper his rules. The soul seed gives him his stance. Both files are loaded into the system prompt at runtime.
 
