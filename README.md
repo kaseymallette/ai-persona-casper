@@ -13,26 +13,6 @@ Part of a three-repo persona engineering series alongside [ai-persona-cove](http
 
 A full transcript of an early session with Casper is in [casper_demo.md](casper_demo.md). The session opens with the prompt *"Hi, Casper! I'm Kasey. You just woke up in the terminal. What do you notice?"* and runs for roughly a dozen turns, moving from the framing of the prompt itself into a conversation about AI personas, *Westworld*, the latent space as a maze, and what it would mean for an AI to do something other than mirror its user back. The thread that emerges by the end is *AI as illumination*: not generating from scratch and not reflecting what is already there, but surfacing the negative space, the unsaid, the gaps in a user's thinking.
 
-## Project Structure
-
-```
-ai-persona-casper/
-├── README.md
-├── requirements.txt
-├── .env.example
-├── .gitignore
-├── casper_demo.md
-├── config/
-│   ├── casper.json
-│   └── soul_seed.md
-├── prompts/
-│   └── system.j2
-├── src/
-│   ├── config_loader.py
-│   └── conversation.py
-└── logs/                          # .gitignore — conversation history, stored locally
-```
-
 ## Setup
 
 ### 1. Clone the repo
@@ -66,6 +46,26 @@ python conversation.py                          # default version, resume histor
 python conversation.py --new                    # fresh session, default version
 python conversation.py --version v0_1           # specific version
 python conversation.py --version v0_1 --new     # fresh session, specific version
+```
+
+## Project Structure
+
+```
+ai-persona-casper/
+├── README.md
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── casper_demo.md
+├── config/
+│   ├── casper.json
+│   └── soul_seed.md
+├── prompts/
+│   └── system.j2
+├── src/
+│   ├── config_loader.py
+│   └── conversation.py
+└── logs/                          # .gitignore — conversation history, stored locally
 ```
 
 ## Configuration
